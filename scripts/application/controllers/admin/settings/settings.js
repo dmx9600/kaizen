@@ -13,6 +13,14 @@
 //        { name: 'dashboard', url: '/dashboard'} ];
 //    $scope.template = $scope.templates[0];
 
+   $scope.addDepartment = function(data) {
+                
+    };
+    
+     $scope.clearDepartment = function(data) {
+                
+    };
+
 
         }]);
 })(angular);
