@@ -1,0 +1,1287 @@
+[
+    
+    {
+    "date": "2014-01-25T00:40:00.000Z",
+    "data":[    
+    {
+        "id": "DEPT001",
+        "name": "Knitting",
+        "kiazan": "12",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT002",
+        "name": "Dyeing ",
+        "kiazan": "10",       
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT003",
+        "name": "Sewing",
+        "kiazan": "6",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT004",
+        "name": "RM Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT005",
+        "name": "FG Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT006",
+        "kiazan": "6",
+        "name": "QA",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT007",
+        "name": "Development",
+        "kiazan": "1",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT008",
+        "name": "Maintenance",
+        "kiazan": "7",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT009",
+        "name": "HR 01",
+        "kiazan": "2",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT010",
+        "name": "MOS",
+        "kiazan": "5",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT011",
+        "name": "IE",
+        "kiazan": "18",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT012",
+        "name": "Marketing",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT013",
+        "name": "IT",
+        "kiazan": "0",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT014",
+        "name": "Planning",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT015",
+        "name": "Commercial",
+        "kiazan": "8",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT016",
+        "name": "Finance",
+        "kiazan": "1",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT017",
+        "name": "Purchasing",
+        "kiazan": "5",
+        "status": "Idle"
+    }
+    ]
+    },
+    {
+    "date": "2014-02-25T00:40:00.000Z",
+    "data":[    
+    {
+        "id": "DEPT001",
+        "name": "Knitting",
+        "kiazan": "12",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT002",
+        "name": "Dyeing ",
+        "kiazan": "10",       
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT003",
+        "name": "Sewing",
+        "kiazan": "6",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT004",
+        "name": "RM Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT005",
+        "name": "FG Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT006",
+        "kiazan": "6",
+        "name": "QA",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT007",
+        "name": "Development",
+        "kiazan": "1",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT008",
+        "name": "Maintenance",
+        "kiazan": "7",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT009",
+        "name": "HR 01",
+        "kiazan": "2",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT010",
+        "name": "MOS",
+        "kiazan": "5",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT011",
+        "name": "IE",
+        "kiazan": "18",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT012",
+        "name": "Marketing",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT013",
+        "name": "IT",
+        "kiazan": "0",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT014",
+        "name": "Planning",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT015",
+        "name": "Commercial",
+        "kiazan": "8",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT016",
+        "name": "Finance",
+        "kiazan": "1",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT017",
+        "name": "Purchasing",
+        "kiazan": "5",
+        "status": "Idle"
+    }
+    ]
+    },
+    {
+    "date": "2014-03-25T00:40:00.000Z",
+    "data":[    
+    {
+        "id": "DEPT001",
+        "name": "Knitting",
+        "kiazan": "12",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT002",
+        "name": "Dyeing ",
+        "kiazan": "10",       
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT003",
+        "name": "Sewing",
+        "kiazan": "6",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT004",
+        "name": "RM Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT005",
+        "name": "FG Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT006",
+        "kiazan": "6",
+        "name": "QA",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT007",
+        "name": "Development",
+        "kiazan": "1",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT008",
+        "name": "Maintenance",
+        "kiazan": "7",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT009",
+        "name": "HR 01",
+        "kiazan": "2",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT010",
+        "name": "MOS",
+        "kiazan": "5",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT011",
+        "name": "IE",
+        "kiazan": "18",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT012",
+        "name": "Marketing",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT013",
+        "name": "IT",
+        "kiazan": "0",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT014",
+        "name": "Planning",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT015",
+        "name": "Commercial",
+        "kiazan": "8",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT016",
+        "name": "Finance",
+        "kiazan": "1",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT017",
+        "name": "Purchasing",
+        "kiazan": "5",
+        "status": "Idle"
+    }
+    ]
+    },
+    {
+    "date": "2014-04-25T00:40:00.000Z",
+    "data":[    
+    {
+        "id": "DEPT001",
+        "name": "Knitting",
+        "kiazan": "12",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT002",
+        "name": "Dyeing ",
+        "kiazan": "10",       
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT003",
+        "name": "Sewing",
+        "kiazan": "6",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT004",
+        "name": "RM Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT005",
+        "name": "FG Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT006",
+        "kiazan": "6",
+        "name": "QA",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT007",
+        "name": "Development",
+        "kiazan": "1",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT008",
+        "name": "Maintenance",
+        "kiazan": "7",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT009",
+        "name": "HR 01",
+        "kiazan": "2",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT010",
+        "name": "MOS",
+        "kiazan": "5",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT011",
+        "name": "IE",
+        "kiazan": "18",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT012",
+        "name": "Marketing",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT013",
+        "name": "IT",
+        "kiazan": "0",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT014",
+        "name": "Planning",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT015",
+        "name": "Commercial",
+        "kiazan": "8",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT016",
+        "name": "Finance",
+        "kiazan": "1",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT017",
+        "name": "Purchasing",
+        "kiazan": "5",
+        "status": "Idle"
+    }
+    ]
+    },
+    {
+    "date": "2014-05-25T00:40:00.000Z",
+    "data":[    
+    {
+        "id": "DEPT001",
+        "name": "Knitting",
+        "kiazan": "12",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT002",
+        "name": "Dyeing ",
+        "kiazan": "10",       
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT003",
+        "name": "Sewing",
+        "kiazan": "6",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT004",
+        "name": "RM Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT005",
+        "name": "FG Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT006",
+        "kiazan": "6",
+        "name": "QA",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT007",
+        "name": "Development",
+        "kiazan": "1",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT008",
+        "name": "Maintenance",
+        "kiazan": "7",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT009",
+        "name": "HR 01",
+        "kiazan": "2",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT010",
+        "name": "MOS",
+        "kiazan": "5",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT011",
+        "name": "IE",
+        "kiazan": "18",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT012",
+        "name": "Marketing",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT013",
+        "name": "IT",
+        "kiazan": "0",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT014",
+        "name": "Planning",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT015",
+        "name": "Commercial",
+        "kiazan": "8",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT016",
+        "name": "Finance",
+        "kiazan": "1",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT017",
+        "name": "Purchasing",
+        "kiazan": "5",
+        "status": "Idle"
+    }
+    ]
+    },
+    {
+    "date": "2014-06-25T00:40:00.000Z",
+    "data":[    
+    {
+        "id": "DEPT001",
+        "name": "Knitting",
+        "kiazan": "12",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT002",
+        "name": "Dyeing ",
+        "kiazan": "10",       
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT003",
+        "name": "Sewing",
+        "kiazan": "6",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT004",
+        "name": "RM Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT005",
+        "name": "FG Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT006",
+        "kiazan": "6",
+        "name": "QA",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT007",
+        "name": "Development",
+        "kiazan": "1",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT008",
+        "name": "Maintenance",
+        "kiazan": "7",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT009",
+        "name": "HR 01",
+        "kiazan": "2",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT010",
+        "name": "MOS",
+        "kiazan": "5",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT011",
+        "name": "IE",
+        "kiazan": "18",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT012",
+        "name": "Marketing",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT013",
+        "name": "IT",
+        "kiazan": "0",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT014",
+        "name": "Planning",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT015",
+        "name": "Commercial",
+        "kiazan": "8",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT016",
+        "name": "Finance",
+        "kiazan": "1",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT017",
+        "name": "Purchasing",
+        "kiazan": "5",
+        "status": "Idle"
+    }
+    ]
+    },
+    {
+    "date": "2014-11-12T00:40:00.000Z",
+    "data":[    
+    {
+        "id": "DEPT001",
+        "name": "Knitting",
+        "kiazan": "12",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT002",
+        "name": "Dyeing ",
+        "kiazan": "10",       
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT003",
+        "name": "Sewing",
+        "kiazan": "6",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT004",
+        "name": "RM Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT005",
+        "name": "FG Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT006",
+        "kiazan": "6",
+        "name": "QA",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT007",
+        "name": "Development",
+        "kiazan": "1",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT008",
+        "name": "Maintenance",
+        "kiazan": "7",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT009",
+        "name": "HR 01",
+        "kiazan": "2",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT010",
+        "name": "MOS",
+        "kiazan": "5",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT011",
+        "name": "IE",
+        "kiazan": "18",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT012",
+        "name": "Marketing",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT013",
+        "name": "IT",
+        "kiazan": "0",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT014",
+        "name": "Planning",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT015",
+        "name": "Commercial",
+        "kiazan": "8",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT016",
+        "name": "Finance",
+        "kiazan": "1",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT017",
+        "name": "Purchasing",
+        "kiazan": "5",
+        "status": "Idle"
+    }
+    ]
+    },
+    {
+    "date": "2014-11-12T00:40:00.000Z",
+    "data":[    
+    {
+        "id": "DEPT001",
+        "name": "Knitting",
+        "kiazan": "12",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT002",
+        "name": "Dyeing ",
+        "kiazan": "10",       
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT003",
+        "name": "Sewing",
+        "kiazan": "6",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT004",
+        "name": "RM Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT005",
+        "name": "FG Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT006",
+        "kiazan": "6",
+        "name": "QA",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT007",
+        "name": "Development",
+        "kiazan": "1",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT008",
+        "name": "Maintenance",
+        "kiazan": "7",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT009",
+        "name": "HR 01",
+        "kiazan": "2",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT010",
+        "name": "MOS",
+        "kiazan": "5",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT011",
+        "name": "IE",
+        "kiazan": "18",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT012",
+        "name": "Marketing",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT013",
+        "name": "IT",
+        "kiazan": "0",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT014",
+        "name": "Planning",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT015",
+        "name": "Commercial",
+        "kiazan": "8",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT016",
+        "name": "Finance",
+        "kiazan": "1",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT017",
+        "name": "Purchasing",
+        "kiazan": "5",
+        "status": "Idle"
+    }
+    ]
+    },
+    {
+    "date": "2014-11-12T00:40:00.000Z",
+    "data":[    
+    {
+        "id": "DEPT001",
+        "name": "Knitting",
+        "kiazan": "12",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT002",
+        "name": "Dyeing ",
+        "kiazan": "10",       
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT003",
+        "name": "Sewing",
+        "kiazan": "6",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT004",
+        "name": "RM Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT005",
+        "name": "FG Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT006",
+        "kiazan": "6",
+        "name": "QA",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT007",
+        "name": "Development",
+        "kiazan": "1",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT008",
+        "name": "Maintenance",
+        "kiazan": "7",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT009",
+        "name": "HR 01",
+        "kiazan": "2",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT010",
+        "name": "MOS",
+        "kiazan": "5",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT011",
+        "name": "IE",
+        "kiazan": "18",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT012",
+        "name": "Marketing",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT013",
+        "name": "IT",
+        "kiazan": "0",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT014",
+        "name": "Planning",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT015",
+        "name": "Commercial",
+        "kiazan": "8",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT016",
+        "name": "Finance",
+        "kiazan": "1",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT017",
+        "name": "Purchasing",
+        "kiazan": "5",
+        "status": "Idle"
+    }
+    ]
+    },
+    {
+    "date": "2014-11-12T00:40:00.000Z",
+    "data":[    
+    {
+        "id": "DEPT001",
+        "name": "Knitting",
+        "kiazan": "12",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT002",
+        "name": "Dyeing ",
+        "kiazan": "10",       
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT003",
+        "name": "Sewing",
+        "kiazan": "6",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT004",
+        "name": "RM Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT005",
+        "name": "FG Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT006",
+        "kiazan": "6",
+        "name": "QA",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT007",
+        "name": "Development",
+        "kiazan": "1",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT008",
+        "name": "Maintenance",
+        "kiazan": "7",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT009",
+        "name": "HR 01",
+        "kiazan": "2",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT010",
+        "name": "MOS",
+        "kiazan": "5",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT011",
+        "name": "IE",
+        "kiazan": "18",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT012",
+        "name": "Marketing",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT013",
+        "name": "IT",
+        "kiazan": "0",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT014",
+        "name": "Planning",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT015",
+        "name": "Commercial",
+        "kiazan": "8",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT016",
+        "name": "Finance",
+        "kiazan": "1",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT017",
+        "name": "Purchasing",
+        "kiazan": "5",
+        "status": "Idle"
+    }
+    ]
+    },
+    {
+    "date": "2014-11-12T00:40:00.000Z",
+    "data":[    
+    {
+        "id": "DEPT001",
+        "name": "Knitting",
+        "kiazan": "12",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT002",
+        "name": "Dyeing ",
+        "kiazan": "10",       
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT003",
+        "name": "Sewing",
+        "kiazan": "6",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT004",
+        "name": "RM Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT005",
+        "name": "FG Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT006",
+        "kiazan": "6",
+        "name": "QA",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT007",
+        "name": "Development",
+        "kiazan": "1",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT008",
+        "name": "Maintenance",
+        "kiazan": "7",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT009",
+        "name": "HR 01",
+        "kiazan": "2",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT010",
+        "name": "MOS",
+        "kiazan": "5",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT011",
+        "name": "IE",
+        "kiazan": "18",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT012",
+        "name": "Marketing",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT013",
+        "name": "IT",
+        "kiazan": "0",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT014",
+        "name": "Planning",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT015",
+        "name": "Commercial",
+        "kiazan": "8",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT016",
+        "name": "Finance",
+        "kiazan": "1",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT017",
+        "name": "Purchasing",
+        "kiazan": "5",
+        "status": "Idle"
+    }
+    ]
+    }, 
+    {
+    "date": "2014-11-12T00:40:00.000Z",
+    "data":[    
+    {
+        "id": "DEPT001",
+        "name": "Knitting",
+        "kiazan": "12",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT002",
+        "name": "Dyeing ",
+        "kiazan": "10",       
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT003",
+        "name": "Sewing",
+        "kiazan": "6",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT004",
+        "name": "RM Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT005",
+        "name": "FG Stores",
+        "kiazan": "4",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT006",
+        "kiazan": "6",
+        "name": "QA",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT007",
+        "name": "Development",
+        "kiazan": "1",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT008",
+        "name": "Maintenance",
+        "kiazan": "7",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT009",
+        "name": "HR 01",
+        "kiazan": "2",
+         "status": "Idle"
+    },
+    {
+        "id": "DEPT010",
+        "name": "MOS",
+        "kiazan": "5",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT011",
+        "name": "IE",
+        "kiazan": "18",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT012",
+        "name": "Marketing",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT013",
+        "name": "IT",
+        "kiazan": "0",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT014",
+        "name": "Planning",
+        "kiazan": "2",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT015",
+        "name": "Commercial",
+        "kiazan": "8",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT016",
+        "name": "Finance",
+        "kiazan": "1",
+        "status": "Idle"
+    },
+    {
+        "id": "DEPT017",
+        "name": "Purchasing",
+        "kiazan": "5",
+        "status": "Idle"
+    }
+    ]
+    }
+]

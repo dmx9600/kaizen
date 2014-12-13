@@ -1,0 +1,75 @@
+[
+    { 
+        "id": "FHN3343",
+        "name": "Deep Bule Sea",
+        "latitude": "8.514952",
+        "longitude": "81.354656",
+        "icon": "./images/groupFish.png",
+        "title": "Tuna",       
+        "capacity": "64",        
+        "status": "Full",
+        "optimized": "false",
+        "draggable":"true"
+    },
+    { 
+        "id": "FHN3536",
+        "name": "Rocky Temple",        
+        "latitude": "9.314312",
+        "longitude": "81.305405",
+        "icon": "./images/groupFish.png",
+        "title": "Tuna",       
+        "capacity": "34",
+       "status": "Full",
+       "optimized": "false",
+       "draggable":"true"
+}, 
+    {
+        "id": "FHN3536",
+        "name": "Rocky Temple",        
+        "latitude": "8.786754",
+        "longitude": "81.547104",
+        "icon": "./images/groupFish.png",
+        "title": "Tuna",       
+        "capacity": "34",
+       "status": "Full",
+       "optimized": "false",
+       "draggable":"true"
+}
+,
+    {
+        "id": "FHN3536",
+        "name": "Rocky Temple",        
+        "latitude": "8.722962",
+        "longitude": "81.471573",
+        "icon": "./images/groupFish.png",
+        "title": "Tuna",       
+        "capacity": "34",
+       "status": "Full",
+       "optimized": "false",
+       "draggable":"true"
+},
+    { 
+        "id": "FHN3536",
+        "name": "Rocky Temple",        
+        "latitude": "9.257389",
+        "longitude": "81.442734",
+        "icon": "./images/groupFish.png",
+        "title": "Tuna",       
+        "capacity": "34",
+       "status": "Full",
+       "optimized": "false",
+       "draggable":"true"
+},
+    { 
+        "id": "FHN3536",
+        "name": "Rocky Temple",        
+        "latitude": "9.257389",
+        "longitude": "81.378190",
+        "icon": "./images/groupFish.png",
+        "title": "Tuna",       
+        "capacity": "34",
+       "status": "Full",
+       "optimized": "false",
+       "draggable":"true"
+}
+] 

@@ -1,0 +1,75 @@
+<div id="wrapper"  class="{{togelWrapperclass}}">      
+    <div id="sidebar-wrapper">
+        <ul id="sidebar_menu" class="sidebar-nav" ng-click="togelWrapper()">
+            <li class="sidebar-brand"><a id="menu-toggle" href="">Analytics<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
+        </ul>          
+        <ul class="sidebar-nav" id="sidebar" ng-repeat="items in navBarItems" >     
+            <li><a href="#/{{items| lowercase}}">{{items}}</a></li>  
+        </ul>
+    </div>
+
+    <!-- Page content -->
+    <div id="page-content-wrapper">
+        <!-- Keep all page content within the page-content inset div! -->
+        <div class="page-content inset">
+            <div class="row">
+              <!--  <h1 class="page-header">Analytics</h1>-->
+              <br>
+              <div class="col-md-12">
+                <div class="row placeholders">
+                    <div class="col-xs-6 col-sm-3 placeholder">
+                        <img data-src="" class="img-thumbnail imagehover" alt="200x200" src="./images/analytics/analytics-big-data.png" width="200px">
+                        <h4>Big Data Analytic</h4>
+                        <!-- <span class="text-muted">Idle Boat and <br/>  On Mission Boat</span>-->
+                    </div>
+                    <div class="col-xs-6 col-sm-3 placeholder">
+
+                        <img data-src="" class="img-thumbnail imagehover" alt="200x200" src="./images/analytics/analytics-employee.png" width="200px">
+
+                        <h4>Analytics Employee</h4>
+                        <!-- <span class="text-muted">Idle Mapping Boat and <br/>  On  Mission Mapping Boat</span>-->
+                    </div>
+                    <div class="col-xs-6 col-sm-3 placeholder">
+                        <img data-src="" class="img-thumbnail imagehover" alt="200x200" src="./images/analytics/analytics-fix.png" width="200px">         
+                        <h4>Analytics Recovery</h4>
+                        <!--  <span class="text-muted">New Fishing Schools and <br/> Harvesting and Idle </span>-->
+                    </div>
+                    <div class="col-xs-6 col-sm-3 placeholder">
+
+                        <img data-src="" class="img-thumbnail imagehover" alt="200x200" src="./images/analytics/analytics-operational.png" width="200px">
+                        <h4>Analytics Operational </h4>
+                        <!--  <span class="text-muted">Fish Quantity</span>-->
+                    </div>
+                </div>
+            </div>
+              <div class="col-md-12">
+                <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">I'm a modal!</h3>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li ng-repeat="item in items">
+                    <a ng-click="selected.item = item">{{ item }}</a>
+                </li>
+            </ul>
+            Selected: <b>{{ selected.item }}</b>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+
+    <button class="btn btn-default" ng-click="open()">Open me!</button>
+    <button class="btn btn-default" ng-click="open('lg')">Large modal</button>
+    <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
+    <div ng-show="selected">Selection from a modal: {{ selected }}</div>  
+              </div>
+            </div>
+        </div>
+    </div>      
+</div>  
+
+
+
