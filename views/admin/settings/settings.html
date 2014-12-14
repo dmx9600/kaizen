@@ -73,11 +73,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!--  <tr ng-repeat="item in departments">
-                                          <td>{{item.id}}</td>
-                                          <td>{{item.name}}</td>                                                             
-                                      </tr>            -->    
-                                    <tr>
+                                  <tr ng-repeat="item in department">
+                                          <td>{{item.Id}}</td>
+                                          <td>{{item.DepartmentName}}</td>  
+                                         <td><a class="btn btn-primary"><span  class="fa fa-pencil-square-o"></span></a></td>    
+                                        <td><a class="btn btn-danger"><span  class="fa fa-trash-o"></span></a></td>       
+                                      </tr>        
+                                      
+                                   <!-- <tr>
                                         <td>DPT001</td>
                                         <td>MOS</td>
                                         <td><a class="btn btn-primary"><span  class="fa fa-pencil-square-o"></span></a></td>    
@@ -88,7 +91,7 @@
                                         <td>IT</td>
                                         <td><a class="btn btn-primary"><span  class="fa fa-pencil-square-o"></span></a></td>    
                                         <td><a class="btn btn-danger"><span  class="fa fa-trash-o"></span></a></td>         
-                                    </tr> 
+                                    </tr>   -->    
                                 </tbody>
                             </table>
                         </div>
@@ -154,11 +157,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!--  <tr ng-repeat="item in departments">
-                                          <td>{{item.id}}</td>
-                                          <td>{{item.name}}</td>                                                             
-                                      </tr>            -->    
-                                    <tr>
+                                    <tr ng-repeat="item in user">
+                                          <td>{{item.EPF}}</td>
+                                          <td>{{item.UserName}}</td> 
+                                            <td>{{item.DepartmentName }}</td> 
+                                          <td><a class="btn btn-primary"><span  class="fa fa-pencil-square-o"></span></a></td>    
+                                        <td><a class="btn btn-danger"><span  class="fa fa-times"></span></a></td>       
+                                      </tr>           
+                                   <!--   <tr>
                                         <td>9564</td>
                                         <td>W A D Dinuka</td>
                                         <td>IT</td>
@@ -171,7 +177,7 @@
                                         <td>Development</td>
                                         <td><a class="btn btn-primary"><span  class="fa fa-pencil-square-o"></span></a></td>    
                                         <td><a class="btn btn-danger"><span  class="fa fa-times"></span></a></td>         
-                                    </tr> 
+                                    </tr>   -->   
                                 </tbody>
                             </table>
 

@@ -1,11 +1,11 @@
 (function(angular) {
-    angular.module('marineControllers').service('departmentService', function(ajaxService) {
+    angular.module('marineControllers').service('userService', function(ajaxService) {
     var self = this;
     
     
-     self.getDepartment = function (data, callback) {
+     self.getAllUser = function (data, callback) {
             return ajaxService.get({
-                url: 'http://localhost:1234/kiazanmsservice/department',
+                url: 'http://localhost:1234/kiazanmsservice/User',
                 cache: false,
                 data: data
             }).done(function (result) {
@@ -14,9 +14,9 @@
             });
         };    
         
-          self.getDepartmentById = function (data, callback) {
+          self.getUserById = function (data, callback) {
             return ajaxService.get({
-                url: 'http://localhost:1234/kiazanmsservice/departmentId',
+                url: 'http://localhost:1234/kiazanmsservice/UserById',
                 cache: false,
                 data: data
             }).done(function (result) {
