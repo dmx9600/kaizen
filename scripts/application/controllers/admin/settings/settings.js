@@ -9,9 +9,14 @@
             };
             $scope.department = [];
             $scope.user = [];
-
+            $scope.Emp_Name ="";
+            $scope.Emp_EPF="";
+            $scope.Emp_UserName="";
+            
+            
             getDepartment();
-            getUser()
+            $scope.departmentes = $scope.department[1]; 
+            getUser();
             
             $scope.getDepartment = function (data) {
                 getDepartment();
@@ -41,6 +46,28 @@
             $scope.addDepartment = function (data) {
 
             };
+            
+            
+            $scope.AddEmployee = function (data) {
+                var user ={
+                    EPF :$scope.Emp_EPF,
+                    Name:$scope.Emp_Name,
+                    DepartmentId:$scope.departmentes.Id,
+                    UserName:$scope.Emp_UserName
+                };
+                add(user);
+            };
+            
+            function add(user){
+                
+                 userService.insertUser(angular.toJson(user)).then(function (data) {
+                     var f =  data;
+                    
+                    $scope.$apply();
+
+                });
+              
+            }
 
             $scope.clearDepartment = function (data) {
 
