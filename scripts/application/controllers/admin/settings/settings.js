@@ -2,30 +2,67 @@
     angular.module('marineControllers').controller("SettingsController", ['$scope', '$http', '$routeParams', 'dashboardService', '$filter', 'departmentService', 'userService',
         function ($scope, $http, $routeParams, dashboardService, $filter, departmentService, userService) {
 
+
+            //Common Variables
             $scope.clickedTab = 1;
             $scope.clickTeb = function (data) {
                 $scope.clickedTab = data;
+                if (data === 2) {
+                    loadEmployee();
+                }
+                if (data === 1) {
+                    loadDepartment();
+                }
                 if (!$scope.$$phase) {
                     $scope.$apply();
                 }
             };
-            $scope.department = [];
-            $scope.user = [];
-            $scope.Emp_Name = "";
-            $scope.Emp_EPF = "";
-            $scope.Emp_UserName = "";
-            $scope.empValidation = false
 
-            getDepartment();
-            $scope.departmentes = $scope.department[1];
-            getUser();
+            //Employee Variables 
+            function loadEmployee() {
+                //Employee Variables 
+                $scope.Emp_Name = "";
+                $scope.Emp_EPF = "";
+                $scope.Emp_UserName = "";
+                $scope.empValidation = false
+                $scope.departmentDropDown= [];
+                $scope.employeeData = [];
+                $scope.employeeVariables = {
+                    EPF: "",
+                    Name: "",
+                    DepartmentId: "",
+                    UserName: "",
+                };
+                getDepartmentDropDown();
+                
+                getEmployee();
+                 if (!$scope.$$phase) {
+                        $scope.$apply();
+                    }
 
-            $scope.getDepartment = function (data) {
+            }
+
+            //Department Variables 
+            function loadDepartment() {
+                //Deprtment Variables 
+                $scope.department = [];
                 getDepartment();
+               
+                 if (!$scope.$$phase) {
+                        $scope.$apply();
+                    }
+            }
+
+            loadDepartment();
+
+
+            //Employee Methods 
+            $scope.getEmployee = function (data) {
+                getEmployee();
             };
 
-            $scope.getUser = function (data) {
-                getUser();
+            $scope.addEmployee = function () {
+                addEmployee();
             };
 
             function getDepartment() {
@@ -34,66 +71,77 @@
                     if (!$scope.$$phase) {
                         $scope.$apply();
                     }
-
+                });
+            }
+            
+            function getDepartmentDropDown() {
+                departmentService.getDepartment().then(function (data) {
+                    $scope.departmentDropDown = data;
+                    $scope.departmentes = $scope.departmentDropDown[1];
+                    if (!$scope.$$phase) {
+                        $scope.$apply();
+                    }
                 });
             }
 
-            function getUser() {
+            function getEmployee() {
                 userService.getAllUser().then(function (data) {
-                    $scope.user.length = 0;
+                    $scope.employeeData.length = 0;
                     if (!$scope.$$phase) {
                         $scope.$apply();
                     }
-                    $scope.user = data;
+                    $scope.employeeData = data;
                     if (!$scope.$$phase) {
                         $scope.$apply();
                     }
-
                 });
             }
 
-            $scope.addDepartment = function (data) {
+            function addEmployee() {
 
-            };
-
-            $scope.AddEmployee = function (data) {
-                add();
-            };
-
-            function add() {
-
-                if (!isEmpty(user)) {
-                    var user = {
+                if (isEmptyEmployeeObject($scope.employeeVariables)) {
+                    $scope.empValidation = true
+                    if (!$scope.$$phase) {
+                        $scope.$apply();
+                    }
+                } else {
+                    $scope.employeeVariables = {
                         EPF: $scope.Emp_EPF,
                         Name: $scope.Emp_Name,
                         DepartmentId: $scope.departmentes.Id,
                         UserName: $scope.Emp_UserName
                     };
-
-                    if (isEmptyUserObject(user)) {
-                        $scope.empValidation = true
+                    userService.insertUser(angular.toJson($scope.employeeVariables)).then(function (data) {
+                        clearEmployee();
                         if (!$scope.$$phase) {
                             $scope.$apply();
                         }
-                    } else {
-                        userService.insertUser(angular.toJson(user)).then(function (data) {
-                            var f = data;
-                            if (!$scope.$$phase) {
-                                $scope.$apply();
-                            }
-
-                        });
-                    }
-                } else {
-                    $scope.empValidation = true
-                    if (!$scope.$$phase) {
-                        $scope.$apply();
-                    }
+                    });
                 }
+
 
             }
 
-            function   isEmptyUserObject(user) {
+            function clearEmployee() {
+                $scope.Emp_Name = "";
+                $scope.Emp_EPF = "";
+                $scope.Emp_UserName = "";
+                $scope.empValidation = false
+                $scope.employeeData.length = 0;
+                $scope.employeeVariables = {
+                    EPF: "",
+                    Name: "",
+                    DepartmentId: "",
+                    UserName: "",
+                };
+                if (!$scope.$$phase) {
+                    $scope.$apply();
+                }
+                getEmployee();
+
+            }
+
+            function isEmptyEmployeeObject(user) {
                 if (isEmpty(user.EPF) || isEmpty(user.EPF) || isEmpty(user.EPF) || isEmpty(user.EPF)) {
                     return true;
                 } else {
@@ -101,12 +149,23 @@
                 }
             }
 
+
+            //Deprtment Methods 
+            $scope.getDepartment = function (data) {
+                getDepartment();
+            };
+
+            $scope.addDepartment = function (data) {
+
+            };
+
             $scope.clearDepartment = function (data) {
 
             };
 
+            //Common Metods
             function isEmpty(value) {
-                return (value == null || value.length === 0);
+                return (value === null || value.length === 0);
             }
             ;
 
