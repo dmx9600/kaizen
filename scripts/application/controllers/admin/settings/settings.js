@@ -313,7 +313,6 @@
                 
             }
             
-
             function clearDepartment() {
                 $scope.isupdate = false;
                 $scope.department.length = 0;
