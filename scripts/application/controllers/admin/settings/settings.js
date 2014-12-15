@@ -17,7 +17,7 @@
                     $scope.$apply();
                 }
             };
-            $scope.isupdate= false
+            $scope.isupdate = false
             //Employee Variables 
             function loadEmployee() {
                 //Employee Variables 
@@ -52,6 +52,7 @@
             function loadDepartment() {
                 //Deprtment Variables 
                 $scope.department = [];
+                $scope.Dep_Name ="";
                 getDepartment();
 
                 if (!$scope.$$phase) {
@@ -79,7 +80,6 @@
                 clickEditEmployee(data);
             };
 
-
             $scope.editEmployee = function (data) {
                 editEmployee();
             };
@@ -89,41 +89,43 @@
             };
 
             function clickEditEmployee(data) {
-            $scope.Emp_Name = data.EMPName;
-            $scope.Emp_EPF = data.EPF;
-            $scope.Emp_UserName = data.UserName;
-            $scope.Emp_Id = data.UserId;
-            $scope.isupdate= true;
-             if (!$scope.$$phase) {
+                $scope.Emp_Name = data.EMPName;
+                $scope.Emp_EPF = data.EPF;
+                $scope.Emp_UserName = data.UserName;
+                $scope.Emp_Id = data.UserId;
+                $scope.isupdate = true;
+                // $scope.departmentes.Id =data.DepartmentId;
+                // $scope.departmentes.DepartmentName =data.DepartmentName; 
+                if (!$scope.$$phase) {
                     $scope.$apply();
                 }
             }
-         
+
             function editEmployee() {
-                
+
                 if (isEmptyEmployeeObject()) {
                     $scope.empValidation = true
                     if (!$scope.$$phase) {
                         $scope.$apply();
                     }
                 } else {
-                   
-                    
-                  
+
+
+
                     $scope.employeeVariables = {
                         EPF: $scope.Emp_EPF,
                         Name: $scope.Emp_Name,
                         DepartmentId: $scope.departmentes.Id,
-                        UserName: $scope.Emp_UserName,                        
+                        UserName: $scope.Emp_UserName,
                         ModifyDate: new Date(),
                         ModifyUserId: 1
                     };
-                    
-                      var obj ={
+
+                    var obj = {
                         user: $scope.employeeVariables,
-                        Id:$scope.Emp_Id
+                        Id: $scope.Emp_Id
                     };
-                    
+
                     userService.updateUser(angular.toJson(obj)).then(function (data) {
                         var emp = data;
                         clearEmployee();
@@ -143,15 +145,6 @@
                 userService.deleteUser(angular.toJson(emp)).then(function (data) {
                     var val = data;
                     clearEmployee();
-                    if (!$scope.$$phase) {
-                        $scope.$apply();
-                    }
-                });
-            }
-
-            function getDepartment() {
-                departmentService.getDepartment().then(function (data) {
-                    $scope.department = data;
                     if (!$scope.$$phase) {
                         $scope.$apply();
                     }
@@ -216,7 +209,7 @@
                 $scope.Emp_EPF = "";
                 $scope.Emp_UserName = "";
                 $scope.empValidation = false;
-                $scope.isupdate= false;
+                $scope.isupdate = false;
                 $scope.employeeData.length = 0;
                 $scope.employeeVariables = {
                     EPF: "",
@@ -240,18 +233,69 @@
             }
 
 
+
+
             //Deprtment Methods 
             $scope.getDepartment = function (data) {
                 getDepartment();
             };
 
             $scope.addDepartment = function (data) {
-
+                addDepartment();
             };
 
             $scope.clearDepartment = function (data) {
-
+               clearDepartment();
             };
+            
+               function clearDepartment() {
+                    $scope.department.length = 0;
+                $scope.Dep_Name ="";
+                getDepartment();
+               }
+
+            function addDepartment() {
+
+                if (isEmptyDepartmentObject()) {
+                    $scope.depValidation = true;
+                    if (!$scope.$$phase) {
+                        $scope.$apply();
+                    }
+                } else {
+                    $scope.departmentVariables = {
+                        DepartmentName:$scope.Dep_Name,                       
+                        StatusId: 1,
+                        CreateDate: new Date(),
+                        CreateUserId: 1,
+                        ModifyDate: new Date(),
+                        ModifyUserId: 1
+                    };
+                    departmentService.insertDepartment(angular.toJson($scope.departmentVariables)).then(function (data) {
+                        var dep = data;
+                        clearDepartment();
+                        if (!$scope.$$phase) {
+                            $scope.$apply();
+                        }
+                    });
+                }
+
+            }
+
+            function isEmptyDepartmentObject() {
+                if (isEmpty($scope.Dep_Name)) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            function getDepartment() {
+                departmentService.getDepartment().then(function (data) {
+                    $scope.department = data;
+                    if (!$scope.$$phase) {
+                        $scope.$apply();
+                    }
+                });
+            }
 
             //Common Metods
             function isEmpty(value) {

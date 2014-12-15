@@ -24,6 +24,17 @@
                     callback(result);
             });
         };    
+        
+        self.insertDepartment = function (data, callback) {
+            return ajaxService.post({
+                url: 'http://localhost:1234/kiazanmsservice/DepartmentInsert',
+                cache: false,
+                data: data
+            }).done(function (result) {
+                if (typeof callback === "function")
+                    callback(result);
+            });
+        };    
     
     
              });
