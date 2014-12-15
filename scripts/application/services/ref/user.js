@@ -36,6 +36,30 @@
             });
         };
         
+         self.updateUser = function (data, callback) {
+            return ajaxService.post({
+                url: 'http://localhost:1234/kiazanmsservice/UserUpdate',
+                cache: false,
+                data: data
+            }).done(function (result) {
+                if (typeof callback === "function")
+                    callback(result);
+            });
+        };
+        
+        
+        
+         self.deleteUser = function (data, callback) {
+            return ajaxService.post({
+                url: 'http://localhost:1234/kiazanmsservice/UserDelete',
+                cache: false,
+                data: data
+            }).done(function (result) {
+                if (typeof callback === "function")
+                    callback(result);
+            });
+        };
+        
         
 
 

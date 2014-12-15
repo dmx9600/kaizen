@@ -17,28 +17,34 @@
                     $scope.$apply();
                 }
             };
-
+            $scope.isupdate= false
             //Employee Variables 
             function loadEmployee() {
                 //Employee Variables 
+                $scope.Emp_Id = "";
                 $scope.Emp_Name = "";
                 $scope.Emp_EPF = "";
                 $scope.Emp_UserName = "";
                 $scope.empValidation = false
-                $scope.departmentDropDown= [];
+                $scope.departmentDropDown = [];
                 $scope.employeeData = [];
                 $scope.employeeVariables = {
                     EPF: "",
                     Name: "",
                     DepartmentId: "",
                     UserName: "",
+                    StatusId: "",
+                    CreateDate: "",
+                    CreateUserId: "",
+                    ModifyDate: "",
+                    ModifyUserId: "",
                 };
                 getDepartmentDropDown();
-                
+
                 getEmployee();
-                 if (!$scope.$$phase) {
-                        $scope.$apply();
-                    }
+                if (!$scope.$$phase) {
+                    $scope.$apply();
+                }
 
             }
 
@@ -47,16 +53,20 @@
                 //Deprtment Variables 
                 $scope.department = [];
                 getDepartment();
-               
-                 if (!$scope.$$phase) {
-                        $scope.$apply();
-                    }
+
+                if (!$scope.$$phase) {
+                    $scope.$apply();
+                }
             }
 
             loadDepartment();
 
 
             //Employee Methods 
+            $scope.clearEmployee = function () {
+                clearEmployee();
+            };
+
             $scope.getEmployee = function (data) {
                 getEmployee();
             };
@@ -64,6 +74,80 @@
             $scope.addEmployee = function () {
                 addEmployee();
             };
+
+            $scope.clickEditEmployee = function (data) {
+                clickEditEmployee(data);
+            };
+
+
+            $scope.editEmployee = function (data) {
+                editEmployee();
+            };
+
+            $scope.deleteEmployee = function (Id) {
+                deleteEmployee(Id);
+            };
+
+            function clickEditEmployee(data) {
+            $scope.Emp_Name = data.EMPName;
+            $scope.Emp_EPF = data.EPF;
+            $scope.Emp_UserName = data.UserName;
+            $scope.Emp_Id = data.UserId;
+            $scope.isupdate= true;
+             if (!$scope.$$phase) {
+                    $scope.$apply();
+                }
+            }
+         
+            function editEmployee() {
+                
+                if (isEmptyEmployeeObject()) {
+                    $scope.empValidation = true
+                    if (!$scope.$$phase) {
+                        $scope.$apply();
+                    }
+                } else {
+                   
+                    
+                  
+                    $scope.employeeVariables = {
+                        EPF: $scope.Emp_EPF,
+                        Name: $scope.Emp_Name,
+                        DepartmentId: $scope.departmentes.Id,
+                        UserName: $scope.Emp_UserName,                        
+                        ModifyDate: new Date(),
+                        ModifyUserId: 1
+                    };
+                    
+                      var obj ={
+                        user: $scope.employeeVariables,
+                        Id:$scope.Emp_Id
+                    };
+                    
+                    userService.updateUser(angular.toJson(obj)).then(function (data) {
+                        var emp = data;
+                        clearEmployee();
+                        if (!$scope.$$phase) {
+                            $scope.$apply();
+                        }
+                    });
+                }
+
+            }
+
+            function deleteEmployee(EmpId) {
+                var emp = {
+                    Id: EmpId
+                };
+
+                userService.deleteUser(angular.toJson(emp)).then(function (data) {
+                    var val = data;
+                    clearEmployee();
+                    if (!$scope.$$phase) {
+                        $scope.$apply();
+                    }
+                });
+            }
 
             function getDepartment() {
                 departmentService.getDepartment().then(function (data) {
@@ -73,7 +157,7 @@
                     }
                 });
             }
-            
+
             function getDepartmentDropDown() {
                 departmentService.getDepartment().then(function (data) {
                     $scope.departmentDropDown = data;
@@ -99,7 +183,7 @@
 
             function addEmployee() {
 
-                if (isEmptyEmployeeObject($scope.employeeVariables)) {
+                if (isEmptyEmployeeObject()) {
                     $scope.empValidation = true
                     if (!$scope.$$phase) {
                         $scope.$apply();
@@ -109,7 +193,12 @@
                         EPF: $scope.Emp_EPF,
                         Name: $scope.Emp_Name,
                         DepartmentId: $scope.departmentes.Id,
-                        UserName: $scope.Emp_UserName
+                        UserName: $scope.Emp_UserName,
+                        StatusId: 1,
+                        CreateDate: new Date(),
+                        CreateUserId: 1,
+                        ModifyDate: new Date(),
+                        ModifyUserId: 1
                     };
                     userService.insertUser(angular.toJson($scope.employeeVariables)).then(function (data) {
                         clearEmployee();
@@ -126,7 +215,8 @@
                 $scope.Emp_Name = "";
                 $scope.Emp_EPF = "";
                 $scope.Emp_UserName = "";
-                $scope.empValidation = false
+                $scope.empValidation = false;
+                $scope.isupdate= false;
                 $scope.employeeData.length = 0;
                 $scope.employeeVariables = {
                     EPF: "",
@@ -141,8 +231,8 @@
 
             }
 
-            function isEmptyEmployeeObject(user) {
-                if (isEmpty(user.EPF) || isEmpty(user.EPF) || isEmpty(user.EPF) || isEmpty(user.EPF)) {
+            function isEmptyEmployeeObject() {
+                if (isEmpty($scope.Emp_EPF) || isEmpty($scope.Emp_Name) || isEmpty($scope.Emp_UserName) || isEmpty($scope.departmentes.Id)) {
                     return true;
                 } else {
                     return false;
