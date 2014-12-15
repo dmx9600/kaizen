@@ -1,30 +1,30 @@
-(function(angular) {
-    angular.module('marineControllers').service('departmentService', function(ajaxService) {
-    var self = this;
-    
-    
-     self.getDepartment = function (data, callback) {
+(function (angular) {
+    angular.module('marineControllers').service('departmentService', function (ajaxService) {
+        var self = this;
+
+
+        self.getDepartment = function (data, callback) {
             return ajaxService.get({
-                url: 'http://localhost:1234/kiazanmsservice/department',
+                url: 'http://localhost:1234/kiazanmsservice/Department',
                 cache: false,
                 data: data
             }).done(function (result) {
                 if (typeof callback === "function")
                     callback(result);
             });
-        };    
-        
-          self.getDepartmentById = function (data, callback) {
+        };
+
+        self.getDepartmentById = function (data, callback) {
             return ajaxService.get({
-                url: 'http://localhost:1234/kiazanmsservice/departmentId',
+                url: 'http://localhost:1234/kiazanmsservice/DepartmentId',
                 cache: false,
                 data: data
             }).done(function (result) {
                 if (typeof callback === "function")
                     callback(result);
             });
-        };    
-        
+        };
+
         self.insertDepartment = function (data, callback) {
             return ajaxService.post({
                 url: 'http://localhost:1234/kiazanmsservice/DepartmentInsert',
@@ -34,8 +34,34 @@
                 if (typeof callback === "function")
                     callback(result);
             });
-        };    
-    
-    
-             });
+        };
+
+
+        self.deleteDepartment = function (data, callback) {
+            return ajaxService.post({
+                url: 'http://localhost:1234/kiazanmsservice/DepartmentDelete',
+                cache: false,
+                data: data
+            }).done(function (result) {
+                if (typeof callback === "function")
+                    callback(result);
+            });
+        };
+
+        self.updateDepartment = function (data, callback) {
+            return ajaxService.post({
+                url: 'http://localhost:1234/kiazanmsservice/DepartmentUpdate',
+                cache: false,
+                data: data
+            }).done(function (result) {
+                if (typeof callback === "function")
+                    callback(result);
+            });
+        };
+
+
+
+
+
+    });
 })(angular);
