@@ -1,14 +1,16 @@
 (function (angular) {
-    angular.module('marineControllers').controller("PortolController", ['$scope', '$http', '$routeParams', 'dashboardService', '$filter', '$modal', 'monthService',
-        function ($scope, $http, $routeParams, dashboardService, $filter, $modal, monthService) {
+    angular.module('marineControllers').controller("PortolController", ['$scope', '$http', '$routeParams', 'dashboardService',
+        '$filter', '$modal', 'monthService','kaizanCountService','departmentService',
+        function ($scope, $http, $routeParams, dashboardService, $filter, $modal, monthService,kaizanCountService,departmentService) {
 
             $scope.togelWrapperclass = "active";
             $scope.clickedTab = 1;
             $scope.month = [];
+             $scope.kaizanCountGrid =[];
             $scope.navBarItems = ["Dashboard", "Portol", "Suggestion"];
             loadMonths();
-
-
+            getDepartmentDropDown();
+            getKaizanCount();
             $scope.togelWrapper = function () {
                 if ($scope.togelWrapperclass == "active") {
                     $scope.togelWrapperclass = "inactive";
@@ -25,10 +27,32 @@
             function loadMonths() {
                 monthService.getMonths().then(function (data) {
                     $scope.month = data;
-                    $scope.$apply();
-
+                    $scope.months = $scope.month[new Date().getMonth()];
+                      if (!$scope.$$phase) {
+                        $scope.$apply();
+                    }
                 });
             };
+            
+             function getDepartmentDropDown() {
+                departmentService.getDepartment().then(function (data) {
+                    $scope.departmentDropDown = data;
+                    $scope.departmentes = $scope.departmentDropDown[1];
+                    if (!$scope.$$phase) {
+                        $scope.$apply();
+                    }
+                });
+            }
+            
+            
+            function getKaizanCount() {
+                kaizanCountService.getAllKiazanCout().then(function (data) {
+                    $scope.kaizanCountGrid = data;                    
+                    if (!$scope.$$phase) {
+                        $scope.$apply();
+                    }
+                });
+            }
 
         }]);
 })(angular);
