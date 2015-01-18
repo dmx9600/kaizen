@@ -52,6 +52,12 @@ appRoot.config(['$routeProvider', '$locationProvider', function($routeProvider, 
         };
         
         
+          var department = {
+            templateUrl: 'views/ref/department/department.html',
+            controller: 'DepartmentController'
+        };
+        
+        
 
 
         $routeProvider.when('/dashboard', dashboard)
@@ -63,6 +69,7 @@ appRoot.config(['$routeProvider', '$locationProvider', function($routeProvider, 
                 .when('/help', help)
                 .when('/portol', portol)
                 .when('/profile', profile)
+                .when('/department', department)
                 .otherwise({redirectTo: '/dashboard'});
 //$routeProvider.otherwise({redirectTo :'/list'});
 //.when('/details/:itemId',details)

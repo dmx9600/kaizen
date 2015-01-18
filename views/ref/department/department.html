@@ -1,0 +1,66 @@
+<form class="form-horizontal" role="form" >
+    <div class="col-xs-5">      
+
+
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Department Name </label>
+            <div class="col-sm-8">
+                <input type="text" maxlength="50" required class="form-control" data-ng-model="Dep_Name">
+            </div>
+        </div>
+
+
+
+
+    </div>  
+
+    <div class="col-xs-5">                             
+
+
+    </div> 
+
+    <div class="col-xs-2">
+        <div class="form-group">
+            <div class="col-sm-12">
+                <div class="separator pull-right">
+                </div>
+                <div class="pull-right">
+                    <input id="Button2" type="button" class="btn btn-success" ng-show="isupdate" value="Update" data-ng-click="editDepartment()" />        
+                    <input id="Button2" type="button" class="btn btn-primary" ng-show="!isupdate" value="Add" data-ng-click="addDepartment()" />                                               
+                    <input id="Button2" type="button" class="btn btn-info" value="Clear" data-ng-click="clearDepartment()" />
+
+                </div>
+            </div>
+        </div>
+    </div> 
+</form> 
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th><label>Department Id</label></th>
+            <th><label>Department</label></th>
+            <th><label></label></th>
+            <th><label></label></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in department">
+            <td>{{item.Id}}</td>
+            <td>{{item.DepartmentName}}</td>  
+            <td><a class="btn btn-primary" ng-click="clickEditDepartment(item)"><span  class="fa fa-pencil-square-o"></span></a></td>    
+            <td><a class="btn btn-danger" ng-click="deleteDepartment(item.Id)" ><span  class="fa fa-trash-o"></span></a></td>       
+        </tr> 
+        <!-- <tr>
+             <td>DPT001</td>
+             <td>MOS</td>
+             <td><a class="btn btn-primary"><span  class="fa fa-pencil-square-o"></span></a></td>    
+             <td><a class="btn btn-danger"><span  class="fa fa-trash-o"></span></a></td>       
+         </tr>   
+         <tr>
+             <td>DPT002</td>
+             <td>IT</td>
+             <td><a class="btn btn-primary"><span  class="fa fa-pencil-square-o"></span></a></td>    
+             <td><a class="btn btn-danger"><span  class="fa fa-trash-o"></span></a></td>         
+         </tr>   -->    
+    </tbody>
+</table>
