@@ -1,12 +1,17 @@
 (function (angular) {
     angular.module('marineControllers').controller("PortolController", ['$scope', '$http', '$routeParams', 'dashboardService',
-        '$filter', '$modal', 'monthService','kaizanCountService','departmentService',
-        function ($scope, $http, $routeParams, dashboardService, $filter, $modal, monthService,kaizanCountService,departmentService) {
+        '$filter', '$modal', 'monthService','kaizanCountService','departmentService','autocompleteFactory','utilityFactory',
+        function ($scope, $http, $routeParams, dashboardService, $filter, $modal, monthService,kaizanCountService,departmentService,autocompleteFactory,utilityFactory) {
 
             $scope.togelWrapperclass = "active";
             $scope.clickedTab = 1;
             $scope.month = [];
-             $scope.kaizanCountGrid =[];
+            $scope.kaizanCountGrid =[];
+            $scope.monthData = {
+                        Id: 0,
+                        Name: ""
+                    };
+            
             $scope.navBarItems = ["Dashboard", "Portol", "Suggestion"];
             loadMonths();
             getDepartmentDropDown();
@@ -33,6 +38,16 @@
                     }
                 });
             };
+            
+             
+            $scope.monthAutoComplete = autocompleteFactory.monthAutoComplete(function (current) {
+                if (utilityFactory.isDirty($scope.phoneNumberType, current)) {
+                    $scope.monthData = {
+                        Id: current.item.value1,
+                        Name: current.item.label
+                    };
+                }
+            });
             
              function getDepartmentDropDown() {
                 departmentService.getDepartment().then(function (data) {

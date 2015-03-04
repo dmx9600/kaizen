@@ -15,13 +15,16 @@
 
 
         <!--Style-->
-        <link rel="stylesheet" href="./styles/lib/bootstrap/bootstrap.css"/>
-        <link rel="stylesheet" href="./styles/lib/morris/morris.css"/>
+        <link rel="stylesheet" href="./styles/lib/bootstrap/bootstrap.css"> 
+        <link rel="stylesheet" href="./styles/lib/morris/morris.css">
+
         <link href="./styles/lib/dashboard.css" rel="stylesheet">
         <link href="./styles/lib/plugin/bootstraptab.css" rel="stylesheet">
+        <link href="./styles/lib/jQueryUI/jquery-ui.css" rel="stylesheet">
         <link href="./styles/lib/plugin/navSidebar.css" rel="stylesheet">
         <link href="./styles/lib/plugin/datetimepicker.css" rel="stylesheet">
-
+        <!--<link rel="stylesheet" type="text/css" href="http://angular-ui.github.com/ng-grid/css/ng-grid.css" />-->
+        <link rel="stylesheet" href="./styles/lib/angular/ui-grid.css">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <!--Style-->
 
@@ -71,7 +74,7 @@
             </div>
         </nav>
         <!--Content Load Hear-->
-        <div class="container-fluid" ng-view>
+        <div class="container-fluid"  ui-view>
 
         </div>
         <!--Content End-->
@@ -82,20 +85,27 @@
 
         <!--Library Files-->  
         <script  src="./scripts/lib/jQuery/jquery-2.1.1.min.js"></script> 
+        <script  src="./scripts/lib/jQuery/jquery.soap.js"></script>        
         <script src="./scripts/lib/bootstrap/bootstrap.min.js"></script>        
-        <script src="./scripts/lib/ie10-viewport-bug-workaround.js"></script>
+        <script src="./scripts/lib/ie10-viewport-bug-workaround.js"></script>         
         <script  src="./scripts/lib/angular/angular.min.js"></script>
         <script src="./scripts/lib/angular/angular-ui-router.js"></script> 
         <script src="./scripts/lib/angular/angular-route.min.js"></script>         
-        <script src="./scripts/lib/angular/angular-animate.min.js"></script> 
+        <script src="./scripts/lib/angular/angular-animate.min.js"></script>        
         <script src="./scripts/lib/raphael/raphael.js"></script> 
         <script src="./scripts/lib/morris/morris.js"></script> 
         <script src="./scripts/lib/plugins/moment.js"></script> 
+        <script src="./scripts/lib/plugins/ng-grid-flexible-height.js"></script> 
         <script src="./scripts/lib/plugins/datetimepicker/datetimepicker.js"></script> 
         <script src="./scripts/lib/plugins/bootstrapAngularJS/ui-bootstrap-tpls-0.11.2.min.js"></script> 
         <script src="./scripts/lib/angular/lodash.min.js"></script>
         <script src="./scripts/lib/angular/bluebird.js"></script>
         <script src="./scripts/lib/angular/angular-google-maps.min.js"></script>
+        <script src="./scripts/lib/blockUI/blockUI.js"></script>
+        <script  src="./scripts/lib/angular/ui-grid.js"></script>
+        <script  src="./scripts/lib/jQueryUI/jquery-ui.js"></script> 
+        <script  src="./scripts/lib/jQueryUI/jquery-ui-1.10.4.autocomplete.js"></script> 
+        <script  src="./scripts/lib/angular/autocomplete.js"></script>
         <!--Library Files End-->
 
 
@@ -125,6 +135,7 @@
         <!--Angular Model Controllers End-->
 
         <!--Angular Services-->
+           <script src="./scripts/application/services/common/commonData.js"></script>
         <script src="./scripts/application/services/listService.js"></script>
         <script src="./scripts/application/services/dashboard.js"></script>
         <script src="./scripts/application/services/ref/department.js"></script>
@@ -135,7 +146,11 @@
 
 
 
-        <!--Angular Factories-->
+         <!--Angular Factories-->
+        
+        <script src="./scripts/application/factories/confirmation.js"></script>        
+        <script src="./scripts/application/factories/autocomplete.js"></script>
+        <script src="./scripts/application/factories/utils.js"></script>
 
         <!--Angular Factories End-->
 
