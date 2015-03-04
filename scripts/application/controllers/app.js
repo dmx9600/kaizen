@@ -8,7 +8,7 @@
             var dashboard = {
             name: "dashboard",
             url: '/dashboard',
-            templateUrl: 'views/common/dashboard/dashboard.html',
+            templateUrl: 'views/common/dashboard.html',
             controller: 'DashboardController'
             }, settings = {
              name: "settings",
@@ -111,7 +111,7 @@
 
             $rootScope.$state = $state;
             $rootScope.$stateParams = $stateParams;
-            $state.transitionTo('login');
+            $state.transitionTo('dashboard');
 
         }]);
 })(angular, jQuery);

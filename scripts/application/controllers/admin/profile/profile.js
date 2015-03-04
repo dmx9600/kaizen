@@ -1,6 +1,6 @@
 (function(angular) {
-    angular.module('marineControllers').controller("ProfileController", ['$scope', '$http', '$routeParams', 'dashboardService', '$filter', 'dashboardService',
-        function($scope, $http, $routeParams, dashboardService, $filter, dashboardService) {
+    angular.module('marineControllers').controller("ProfileController", ['$scope', '$http', '$routeParams',  '$filter',
+        function($scope, $http, $routeParams, $filter) {
 
             $scope.sort = {
                 sortingOrder: 'id',
@@ -14,15 +14,15 @@
             $scope.currentPage = 0;
             $scope.getfocus = true;
             loadFishingBoatsDetails();
-            function loadFishingBoatsDetails() {
-                dashboardService.fishingBoatsDetails().then(function(data) {
-                    $scope.ishingBoatsDetailsList = data;
-                    $scope.searchTable();
-                    $scope.$apply();
-
-                });
-            }
-            ;
+//            function loadFishingBoatsDetails() {
+//                dashboardService.fishingBoatsDetails().then(function(data) {
+//                    $scope.ishingBoatsDetailsList = data;
+//                    $scope.searchTable();
+//                    $scope.$apply();
+//
+//                });
+//            }
+//            ;
 
 
 

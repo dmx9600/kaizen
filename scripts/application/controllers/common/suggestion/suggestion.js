@@ -1,6 +1,6 @@
 (function (angular) {
-    angular.module('marineControllers').controller("SuggestionController", ['$scope', '$http', '$routeParams', 'dashboardService', '$filter',
-        function ($scope, $http, $routeParams, dashboardService, $filter) {
+    angular.module('marineControllers').controller("SuggestionController", ['$scope', '$http', '$routeParams', '$filter',
+        function ($scope, $http, $routeParams, $filter) {
 
 
             $scope.navBarItems = ["Dashboard", "Portol", "Suggestion"];

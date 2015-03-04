@@ -1,6 +1,6 @@
 (function (angular) {
-    angular.module('marineControllers').controller("DashboardController", ['$scope', '$http', '$routeParams', 'dashboardService', '$filter',
-        function ($scope, $http, $routeParams, dashboardService, $filter) {
+    angular.module('marineControllers').controller("DashboardController", ['$scope', '$http', '$routeParams', '$filter',
+        function ($scope, $http, $routeParams, $filter) {
 
             $scope.dateTimeNow = new Date();
             $scope.togelWrapperclass = "active";
@@ -35,7 +35,7 @@
 
             $scope.getfocus = true;
             $scope.ishingBoatsDetailsList = [];
-            loadFishingBoatsDetails(null);
+          //  loadFishingBoatsDetails(null);
 
             $scope.getfocusTableHead = function () {
                 $scope.getfocus = false;
@@ -47,25 +47,7 @@
                 //  $scope.$apply();
             };
 
-            function loadFishingBoatsDetails(moanthValue) {
-                dashboardService.fishingBoatsDetails().then(function (data) {
-                     var month;
-                    if(moanthValue == null ){
-                     month = $filter('date')(new Date(), 'M');   
-                    }else{
-                     month = moanthValue;
-                    }
-                    
-                    var date1 = $filter('date')($scope.departmentKiazanDate, 'yyyy-MM-dd');
-                    var date2 = $filter('date')(data[month].date, 'yyyy-MM-dd');
-                    if (date1 === date2)
-                    {
-                        $scope.ishingBoatsDetailsList = data[month].data;
-                        $scope.searchTable();
-                        $scope.$apply();
-                    }
-                });
-            };
+       
 
 
             $scope.$watch('departmentKiazanDate', function () {

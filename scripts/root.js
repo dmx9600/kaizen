@@ -1,6 +1,6 @@
 (function(angular) {
-    angular.module('myApp').controller("RootController", ['$scope', '$http', '$routeParams', 'dashboardService', '$filter', '$location','$timeout',
-        function($scope, $http, $routeParams, dashboardService, $filter, $location,$timeout) {
+    angular.module('myApp').controller("RootController", ['$scope', '$http', '$routeParams',  '$filter', '$location','$timeout',
+        function($scope, $http, $routeParams, $filter, $location,$timeout) {
 
             //$scope.search = "Search Valueas";
 

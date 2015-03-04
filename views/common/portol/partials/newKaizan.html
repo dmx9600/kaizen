@@ -1,0 +1,123 @@
+
+<div class="row">
+    <form class="form-horizontal" role="form" >
+        <div class="col-xs-6">      
+            <div class="form-group">
+                <label class="col-sm-4 control-label">Suggestion No</label>
+                <div class="col-sm-8">
+                    <input type="text" maxlength="50" required class="form-control input-sm" data-ng-model="Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-4 control-label">Month</label>
+                <div class="col-sm-8">
+
+                    <input type="text"  class="form-control input-sm"  placeholder="Device Type"   ui-Autocomplete="monthAutoComplete"  data-ng-model="monthData.Name"/>
+
+
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-4 control-label">Proposer</label>
+                <div class="col-sm-6">
+                    <select name="plant" class="form-control input-sm" data-ng-options="" required data-ng-model="plant">
+                        <option value="" selected="selected">Select  Proposer</option>                                                
+                    </select>                                        
+
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-success"><span  class="fa fa-user"></span></a>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">Responsibility</label>
+                <div class="col-sm-6">
+                    <select name="plant" class="form-control input-sm" data-ng-options="" required data-ng-model="plant">
+                        <option value="" selected="selected">Select  Responsibility</option>                                                
+                    </select>                                        
+
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-success"><span  class="fa fa-user"></span></a>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-4 control-label">Kaizen Status</label>
+                <div class="col-sm-8">
+                    <input type="text" maxlength="50" required class="form-control input-sm" data-ng-model="Name">
+
+                </div>
+            </div> 
+            <div class="form-group">
+                <label class="col-sm-4 control-label">Suggestion</label>
+                <div class="col-sm-8">
+                    <textarea class="form-control input-sm" rows="3"></textarea>
+                </div>
+            </div>
+
+
+
+        </div>  
+
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label class="col-sm-4 control-label">Department</label>
+                <div class="col-sm-8">
+                    <select class="form-control input-sm" ng-model="departmentes" 
+                            ng-options="departmentes as departmentes.DepartmentName for departmentes in departmentDropDown">                                              
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">Benefits </label>
+                <div class="col-sm-8">
+                    <label><input type="checkbox" value="">Safety</label>
+                    <label><input type="checkbox" value="">Quality</label>
+                    <label><input type="checkbox" value="">Delivery</label>
+                    <label><input type="checkbox" value="">Cost </label>
+                    <label><input type="checkbox" value="">Morale</label>
+                    <label><input type="checkbox" value="">Environment</label>
+                    <label><input type="checkbox" value="">6S </label>
+                    <label><input type="checkbox" value="">Productivity</label>
+                </div>
+            </div> 
+            <div class="form-group">
+                <label class="col-sm-4 control-label">Cost Saving</label>
+                <div class="col-sm-8">
+                    <input type="text" maxlength="50" required class="form-control input-sm" data-ng-model="Name">
+                </div>
+            </div> 
+            <div class="form-group">
+                <label class="col-sm-4 control-label">Time Improvement</label>
+                <div class="col-sm-8">
+                    <input type="text" maxlength="50" required class="form-control input-sm" data-ng-model="Name">
+                </div>
+            </div> 
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">Comment</label>
+                <div class="col-sm-8">
+                    <textarea class="form-control input-sm" rows="3"></textarea>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <div class="separator pull-right">
+                    </div>
+                    <div class="pull-right">
+                        <input id="Button2" type="button" class="btn btn-primary" value="Add" data-ng-click="" />                                               
+                        <input id="Button2" type="button" class="btn btn-info" value="Clear" data-ng-click="" />
+
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+    </form> 
+
+</div>

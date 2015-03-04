@@ -1,6 +1,6 @@
 (function (angular) {
-    angular.module('marineControllers').controller("DepartmentController", ['$scope', '$http', '$routeParams', 'dashboardService', '$filter', 'departmentService', 'userService',
-        function ($scope, $http, $routeParams, dashboardService, $filter, departmentService) {
+    angular.module('marineControllers').controller("DepartmentController", ['$scope', '$http', '$routeParams', '$filter', 'departmentService', 'userService',
+        function ($scope, $http, $routeParams, $filter, departmentService) {
 
 getDepartmentDropDown();
 loadDepartment();

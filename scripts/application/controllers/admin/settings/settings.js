@@ -1,6 +1,6 @@
 (function (angular) {
-    angular.module('marineControllers').controller("SettingsController", ['$scope', '$http', '$routeParams', 'dashboardService', '$filter', 'departmentService', 'userService',
-        function ($scope, $http, $routeParams, dashboardService, $filter, departmentService, userService) {
+    angular.module('marineControllers').controller("SettingsController", ['$scope', '$http', '$routeParams', '$filter', 'departmentService', 'userService',
+        function ($scope, $http, $routeParams, $filter, departmentService, userService) {
 
 
             //Common Variables

@@ -1,7 +1,7 @@
 (function (angular) {
-    angular.module('marineControllers').controller("PortolController", ['$scope', '$http', '$routeParams', 'dashboardService',
-        '$filter', '$modal', 'monthService','kaizanCountService','departmentService','autocompleteFactory','utilityFactory',
-        function ($scope, $http, $routeParams, dashboardService, $filter, $modal, monthService,kaizanCountService,departmentService,autocompleteFactory,utilityFactory) {
+    angular.module('marineControllers').controller("PortolController", ['$scope', '$http', '$routeParams',
+        '$filter', '$modal','kaizanCountService','departmentService','autocompleteFactory','utilityFactory',
+        function ($scope, $http, $routeParams, $filter, $modal ,kaizanCountService,departmentService,autocompleteFactory,utilityFactory) {
 
             $scope.togelWrapperclass = "active";
             $scope.clickedTab = 1;
@@ -13,9 +13,15 @@
                     };
             
             $scope.navBarItems = ["Dashboard", "Portol", "Suggestion"];
-            loadMonths();
-            getDepartmentDropDown();
-            getKaizanCount();
+            
+            
+            $scope.tabs = [
+                {title: 'Add New Kaizan', template: "employee", active: false},
+                  {title: 'Add  Kaizan Count', template: "device", active: false},
+                {title: 'Kaizan Approval', template: "boat", active: false}
+              
+            ];
+
             $scope.togelWrapper = function () {
                 if ($scope.togelWrapperclass == "active") {
                     $scope.togelWrapperclass = "inactive";
@@ -24,21 +30,7 @@
                 }
             };
 
-            $scope.clickTeb = function (data) {
-                $scope.clickedTab = data;
-
-            };
-
-            function loadMonths() {
-                monthService.getMonths().then(function (data) {
-                    $scope.month = data;
-                    $scope.months = $scope.month[new Date().getMonth()];
-                      if (!$scope.$$phase) {
-                        $scope.$apply();
-                    }
-                });
-            };
-            
+                      
              
             $scope.monthAutoComplete = autocompleteFactory.monthAutoComplete(function (current) {
                 if (utilityFactory.isDirty($scope.phoneNumberType, current)) {
@@ -49,25 +41,7 @@
                 }
             });
             
-             function getDepartmentDropDown() {
-                departmentService.getDepartment().then(function (data) {
-                    $scope.departmentDropDown = data;
-                    $scope.departmentes = $scope.departmentDropDown[1];
-                    if (!$scope.$$phase) {
-                        $scope.$apply();
-                    }
-                });
-            }
-            
-            
-            function getKaizanCount() {
-                kaizanCountService.getAllKiazanCout().then(function (data) {
-                    $scope.kaizanCountGrid = data;                    
-                    if (!$scope.$$phase) {
-                        $scope.$apply();
-                    }
-                });
-            }
+
 
         }]);
 })(angular);
