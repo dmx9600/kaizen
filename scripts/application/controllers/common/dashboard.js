@@ -52,7 +52,7 @@
 
             $scope.$watch('departmentKiazanDate', function () {
                 var month = $filter('date')($scope.departmentKiazanDate, 'M');   
-               loadFishingBoatsDetails(month);
+             //  loadFishingBoatsDetails(month);
             });
 
 
@@ -70,6 +70,14 @@
             $scope.pagedItems = [];
             $scope.currentPage = 0;
 
+
+ $scope.chagenData = function () {
+     $scope.graphDataNike =  [
+                {value: 45, label: 'Previous Month'},
+                {value: 2, label: 'Current Month'}
+            ];
+              $scope.$apply();
+ };
             $scope.sidebarTogel = function () {
                 $scope.boolChangeClass = !$scope.boolChangeClass;
                 $scope.$apply();
@@ -164,12 +172,12 @@
                 $scope.currentPage = this.n;
             };
 
-
-            //Paging and Sorting end
-            var graphDataNike = [
+$scope.graphDataNike =  [
                 {value: 35, label: 'Previous Month'},
                 {value: 65, label: 'Current Month'}
             ];
+            //Paging and Sorting end
+            var graphDataNike =$scope.graphDataNike;
 
             var graphDataIt = [
                 {value: 80, label: 'Previous Month'},

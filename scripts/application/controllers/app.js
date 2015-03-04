@@ -48,12 +48,12 @@
             },portol = {
              name: "portol",
             url: '/portol',
-            templateUrl: 'views/commonportol.html',
+            templateUrl: 'views/common/portol.html',
             controller: 'PortolController'
             },suggestion = {
              name: "suggestion",
             url: '/suggestion',
-            templateUrl: 'views/common/suggestion.html',
+            templateUrl: 'views/department/suggestion.html',
             controller: 'SuggestionController'
             },department = {
              name: "department",
