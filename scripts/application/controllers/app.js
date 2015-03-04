@@ -38,7 +38,7 @@
             },help = {
              name: "help",
             url: '/help',
-            templateUrl: 'views/common/help/help.html',
+            templateUrl: 'views/common/help.html',
             controller: 'HelpController'
             },profile = {
              name: "profile",
@@ -48,12 +48,12 @@
             },portol = {
              name: "portol",
             url: '/portol',
-            templateUrl: 'views/common/portol/portol.html',
+            templateUrl: 'views/commonportol.html',
             controller: 'PortolController'
             },suggestion = {
              name: "suggestion",
             url: '/suggestion',
-            templateUrl: 'views/common/suggestion/suggestion.html',
+            templateUrl: 'views/common/suggestion.html',
             controller: 'SuggestionController'
             },department = {
              name: "department",
