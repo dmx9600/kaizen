@@ -28,7 +28,7 @@
             $scope.pagedItems = [];
             $scope.currentPage = 0;
 
-            $scope.navBarItems = ["Dashboard", "Portol", "Suggestion"];
+            $scope.navBarItems = [{title:'Dashboard',url:'dashboard'}, {title:'Portol',url:'portol/newKaizan'}, {title:'Suggestion',url:'suggestion/newSuggestion'}];
 
 
 
