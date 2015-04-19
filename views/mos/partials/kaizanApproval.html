@@ -1,98 +1,90 @@
- 
 <div class="row">
-    <form class="form-horizontal" role="form" >
-        <div class="col-xs-6">      
-            <div class="form-group">
-                <label class="col-sm-4 control-label">Month</label>
-                <div class="col-sm-8">
+           <form class="form-horizontal" role="form" >
+                                                <div class="col-xs-6">      
+                                                    <div class="form-group">
+                                                        <label class="col-sm-4 control-label">Month</label>
+                                                        <div class="col-sm-8">
+                                                            <select name="plant" class="form-control" data-ng-options="" required data-ng-model="plant">
+                                                                <option value="" selected="selected">January</option>
+                                                                <option value="" >February</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>  
 
-                    <select class="form-control input-sm" ng-model="months" 
-                            ng-options="months as months.name for months in month">                                              
-                    </select>
+                                                <div class="col-xs-6">     
+                                                    <div class="form-group">
+                                                        <label class="col-sm-4 control-label">Status</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" maxlength="50" required class="form-control" data-ng-model="Name">
 
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-4 control-label">Department</label>
-                <div class="col-sm-8">
-                    <select class="form-control input-sm" ng-model="departmentes" 
-                            ng-options="departmentes as departmentes.DepartmentName for departmentes in departmentDropDown">                                              
-                    </select>
-                </div>
-            </div>
+                                                        </div>
+                                                    </div>  
 
+   
+                                                </div> 
 
+                                            </form> 
+    
+    
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
 
-        </div>  
+                                                        <th><label>Kaizan No</label></th>                                       
+                                                        <th><label>Date</label></th>
+                                                        <th><label>Proposer</label></th>
+                                                        <th><label>Status</label></th>
+                                                        <th><label>Kaizan</label></th>
+                                                        <th colspan="2"><label>Approval</label></th>
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!--  <tr ng-repeat="item in departments">
+                                                          <td>{{item.id}}</td>
+                                                          <td>{{item.name}}</td>                                                             
+                                                      </tr>            -->    
+                                                    <tr>
+                                                        <td>KZN0001</td>
+                                                        <td>23/3/2015</td>
+                                                        <td>Kasun</td>
+                                                        <td>[Approval Status]</td>
+                                                        <td><button class="btn btn-info btn-xs"><span class="glyphicon glyphicon-list-alt"></span></button></td>
+                                                        <td><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></button></td>
+                                                          <td><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button></td>
+                                                           
 
-        <div class="col-xs-6">     
-            <div class="form-group">
-                <label class="col-sm-4 control-label">Kaizen Count</label>
-                <div class="col-sm-8">
-                    <input type="number" maxlength="10" required class="form-control input-sm" data-ng-model="Name">
+                                                    </tr>   
+                                                    <tr>
+                                                       <td>KZN0045</td>
+                                                        <td>2/5/2015</td>
+                                                            <td>TharukaK</td>
+                                                       <td>[Approval Status]</td>
+                                                        <td><button class="btn btn-info btn-xs"><span class="glyphicon glyphicon-list-alt"></span></button></td>
+                                                                      <td><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></button></td>
+                                                          <td><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button></td>
+                                                    </tr> 
 
-                </div>
-            </div>  
-
-            <div class="form-group">
-                <div class="col-sm-12">
-                    <div class="separator pull-right">
-                    </div>
-                    <div class="pull-right">
-                        <input id="Button2" type="button" class="btn btn-primary" value="Add" data-ng-click="" />                                               
-                        <input id="Button2" type="button" class="btn btn-info" value="Clear" data-ng-click="" />
-
-                    </div>
-                </div>
-            </div>
-        </div> 
-
-    </form> 
-
-    <table class="table table-hover">
-        <thead>
-            <tr>
-
-                <th><label>DepartmentName</label></th>                                       
-                <th><label>Month</label></th>
-                <th><label>Kaizen Count</label></th>
-
-
-
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="item in kaizanCountGrid">
-                <td>{{item.Department}}</td>
-                <td>{{item.Month}}</td>
-                <td>{{item.KaizenCount}}</td>   
-            </tr>            
-            <!-- <tr>
-                 <td>IT</td>
-                 <td>January</td>
-                 <td>20</td>
-
-             </tr>   
-             <tr>
-                 <td></td>
-                 <td>February</td>
-                 <td>10</td>
-
-             </tr> 
-
-             <tr>
-                 <td>Development</td>
-                 <td>January</td>
-                 <td>20</td>
-
-             </tr>   
-             <tr>
-                 <td></td>
-                 <td>February</td>
-                 <td>10</td>
-
-             </tr>  -->  
-        </tbody>
-    </table>
-
+                                                    <tr>
+                                                        <td>KZN0564</td>
+                                                       <td>4/6/2015</td>
+                                                           <td>YasodhaL</td>
+                                                         <td>[Approval Status]</td>
+                                                          <td><button class="btn btn-info btn-xs"><span class="glyphicon glyphicon-list-alt"></span></button></td>
+                 <td><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></button></td>
+                                                          <td><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button></td>
+                                                    </tr>   
+                                                    <tr>
+                                                       <td>KZN0563</td>
+                                                        <td>8/5/2015</td>
+                                                            <td>NeeroH</td>
+                                                        <td>[Approval Status]</td>
+                                                         <td><button class="btn btn-info btn-xs"><span class="glyphicon glyphicon-list-alt"></span></button></td>
+                 <td><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></button></td>
+                                                          <td><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button></td>
+                                                    </tr> 
+                                                </tbody>
+                                            </table>
+ 
 </div>
