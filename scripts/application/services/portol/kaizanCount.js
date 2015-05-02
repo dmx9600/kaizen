@@ -57,6 +57,17 @@
             });
         };
         
+         self.kaizenMaxId = function (data, callback) {
+            return ajaxService.get({
+                url: 'http://localhost:1234/kiazanmsservice/KaizenMaxId',
+                cache: false,
+                data: data
+            }).done(function (result) {
+                if (typeof callback === "function")
+                    callback(result);
+            });
+        };
+        
        
         
         
