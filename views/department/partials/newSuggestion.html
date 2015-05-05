@@ -56,7 +56,8 @@
                     <div class="separator pull-right">
                     </div>
                     <div class="pull-right">
-                        <input id="Button2" type="button" class="btn btn-primary" value="Add" data-ng-click="clickAddSuggestion()" />                                               
+                        <input id="Button2"  data-ng-show="Nsug_SuggestionId<=0 ||Nsug_SuggestionId === null" type="button" class="btn btn-primary" value="Add" data-ng-click="clickAddSuggestion()" /> 
+                         <input id="Button2" data-ng-show="Nsug_SuggestionId > 0" type="button" class="btn btn-success" value="Edit" data-ng-click="clickEditSuggestion()" />                       
                         <input id="Button2" type="button" class="btn btn-info" value="Clear" data-ng-click="clearSuggestion()" />
 
                     </div>
@@ -77,6 +78,7 @@
                 <th><label>Status</label></th>
                 <th><label>Suggestion</label></th>
                 <th><label>Comment</label></th>
+                 <th><label></label></th>
             </tr>
         </thead>
         <tbody>
@@ -87,7 +89,7 @@
                 <td>{{item.KaizenStatus}}</td>
                 <td>{{item.Suggestion}}</td>
                 <td>{{item.Comment}}</td>
-                <!-- <td><button class="btn btn-info btn-xs"><span class="glyphicon glyphicon-list-alt"></span></button></td> -->  
+                <td><button data-ng-click="clickEdit(item)" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-list-alt"></span></button></td>
 
             </tr>           
             <!--    <tr>
