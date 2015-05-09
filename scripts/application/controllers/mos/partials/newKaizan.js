@@ -7,6 +7,7 @@
                   Id:1,
                   Name:"New Kaizen"
               };
+              $scope.kaizenList = [];
             
              $scope.proposerAutocomplete = autocompleteFactory.proposerAutocomplete(function (current) {
                 if (utilityFactory.isDirty($scope.phoneNumberType, current)) {
@@ -54,8 +55,26 @@
                     }
                 });
             }
-            
-            
+                    getKaizen();
+                  function getKaizen() {
+               
+                $scope.kaizenList.length = 0;
+                if (!$scope.$$phase) {
+                    $scope.$apply();
+                }
+                
+//                var obj = {
+//                    "MonthId": 0,
+//                    "KaizenStatus": 4
+//                };
+                
+                kaizanCountService.getAllKaizen().then(function (data) {
+                    $scope.kaizenList = data;
+                    if (!$scope.$$phase) {
+                        $scope.$apply();
+                    }
+                });
+            }
             
             
             

@@ -26,65 +26,30 @@
 
                                             </form> 
     
-    
-                                            <table class="table table-hover">
-                                                <thead>
-                                                    <tr>
+        <table class="table table-hover">
+        <thead>
+            <tr>
 
-                                                        <th><label>Kaizan No</label></th>                                       
-                                                        <th><label>Date</label></th>
-                                                        <th><label>Proposer</label></th>
-                                                        <th><label>Status</label></th>
-                                                        <th><label>Kaizan</label></th>
-                                                        <th colspan="2"><label>Approval</label></th>
-                                                        
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <!--  <tr ng-repeat="item in departments">
-                                                          <td>{{item.id}}</td>
-                                                          <td>{{item.name}}</td>                                                             
-                                                      </tr>            -->    
-                                                    <tr>
-                                                        <td>KZN0001</td>
-                                                        <td>23/3/2015</td>
-                                                        <td>Kasun</td>
-                                                        <td>[Approval Status]</td>
-                                                        <td><button class="btn btn-info btn-xs"><span class="glyphicon glyphicon-list-alt"></span></button></td>
-                                                        <td><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></button></td>
-                                                          <td><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button></td>
-                                                           
-
-                                                    </tr>   
-                                                    <tr>
-                                                       <td>KZN0045</td>
-                                                        <td>2/5/2015</td>
-                                                            <td>TharukaK</td>
-                                                       <td>[Approval Status]</td>
-                                                        <td><button class="btn btn-info btn-xs"><span class="glyphicon glyphicon-list-alt"></span></button></td>
-                                                                      <td><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></button></td>
-                                                          <td><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button></td>
-                                                    </tr> 
-
-                                                    <tr>
-                                                        <td>KZN0564</td>
-                                                       <td>4/6/2015</td>
-                                                           <td>YasodhaL</td>
-                                                         <td>[Approval Status]</td>
-                                                          <td><button class="btn btn-info btn-xs"><span class="glyphicon glyphicon-list-alt"></span></button></td>
-                 <td><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></button></td>
-                                                          <td><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button></td>
-                                                    </tr>   
-                                                    <tr>
-                                                       <td>KZN0563</td>
-                                                        <td>8/5/2015</td>
-                                                            <td>NeeroH</td>
-                                                        <td>[Approval Status]</td>
-                                                         <td><button class="btn btn-info btn-xs"><span class="glyphicon glyphicon-list-alt"></span></button></td>
-                 <td><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></button></td>
-                                                          <td><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button></td>
-                                                    </tr> 
-                                                </tbody>
-                                            </table>
+                <th><label>Kaizan No</label></th>                                       
+                <th><label>Date</label></th>
+                <th><label>Proposer</label></th>
+                <th><label>Status</label></th>
+                <th><label>Suggestion</label></th>
+                <th><label>Comment</label></th>
+                <th colspan="2"><label>Approval</label></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in kaizenList">
+                <td>{{item.KaizanNo}}</td>
+                <td>{{item.Date}}</td>
+                <td>{{item.ProposerName}}</td>
+                <td>{{item.KaizenStatus}}</td>
+                <td>{{item.Suggestion}}</td>
+                <td>{{item.Comment}}</td>
+                 <td><button data-ng-disabled="item.KaizenStatusId == 5" class="btn btn-success btn-xs" data-ng-click="approve(item)" ><span class="glyphicon glyphicon-ok"></span></button></td>
+                <td><button data-ng-disabled="item.KaizenStatusId == 6" class="btn btn-danger btn-xs" data-ng-click="reject(item)"><span class="glyphicon glyphicon-remove"></span></button></td>
+        </tbody>
+    </table>
  
 </div>
