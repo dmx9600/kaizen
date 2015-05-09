@@ -29,11 +29,10 @@
                     getSuggestion($scope.monthData.Id, $scope.statusbyModule.Id);
                 }
             });
-            
-            
-            
+
+
             $scope.approve = function(data) {
-               approve(data); 
+                approve(data);
                 //initialization();  getSuggestion($scope.monthData.Id, $scope.statusbyModule.Id);
             };
 
@@ -49,19 +48,19 @@
                 if (!$scope.$$phase) {
                     $scope.$apply();
                 }
-               
+
                 kaizanCountService.approvalSuggestion(angular.toJson(obj)).then(function(data) {
-                      getSuggestion(0, 0);
+                    getSuggestion(0, 0);
                     if (!$scope.$$phase) {
                         $scope.$apply();
                     }
                 });
 
-                 getSuggestion(0, 0);
+                getSuggestion(0, 0);
 
             }
-          
-            
+
+
             function reject(data) {
                 var obj = {
                     "Id": data.Id,
@@ -72,17 +71,17 @@
                     $scope.$apply();
                 }
                 kaizanCountService.approvalSuggestion(angular.toJson(obj)).then(function(data) {
-                     //$scope.suggestionList.length = 0;
-                     getSuggestion(0, 0);
+                    //$scope.suggestionList.length = 0;
+                    getSuggestion(0, 0);
                     if (!$scope.$$phase) {
                         $scope.$apply();
                     }
                 });
 
-                
+
             }
             $scope.reject = function(data) {
-               reject(data); 
+                reject(data);
                 //initialization();
             };
 

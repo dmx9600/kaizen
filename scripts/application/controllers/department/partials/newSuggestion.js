@@ -28,6 +28,31 @@
                 clear();
                 initialization();
             };
+            
+                 function reject(data) {
+                var obj = {
+                    "Id": data.Id,
+                    "Approval": 3
+                };
+
+                if (!$scope.$$phase) {
+                    $scope.$apply();
+                }
+                kaizanCountService.approvalSuggestion(angular.toJson(obj)).then(function(data) {
+                    //$scope.suggestionList.length = 0;
+                    getSuggestion(0, 0);
+                    if (!$scope.$$phase) {
+                        $scope.$apply();
+                    }
+                });
+
+
+            }
+            $scope.reject = function(data) {
+                reject(data);
+                //initialization();
+            };
+
            
             function addSuggestion() {
                 $scope.suggestionVariables = {
