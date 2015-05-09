@@ -5,7 +5,7 @@
 
         self.getDepartment = function (data, callback) {
             return ajaxService.get({
-                url: 'http://localhost:1234/kiazanmsservice/Department',
+                url: 'http://localhost:8080/kiazanmsservice/Department',
                 cache: false,
                 data: data
             }).done(function (result) {
@@ -16,7 +16,7 @@
 
         self.getDepartmentById = function (data, callback) {
             return ajaxService.get({
-                url: 'http://localhost:1234/kiazanmsservice/DepartmentId',
+                url: 'http://localhost:8080/kiazanmsservice/DepartmentId',
                 cache: false,
                 data: data
             }).done(function (result) {
@@ -27,7 +27,7 @@
 
         self.insertDepartment = function (data, callback) {
             return ajaxService.post({
-                url: 'http://localhost:1234/kiazanmsservice/DepartmentInsert',
+                url: 'http://localhost:8080/kiazanmsservice/DepartmentInsert',
                 cache: false,
                 data: data
             }).done(function (result) {
@@ -39,7 +39,7 @@
 
         self.deleteDepartment = function (data, callback) {
             return ajaxService.post({
-                url: 'http://localhost:1234/kiazanmsservice/DepartmentDelete',
+                url: 'http://localhost:8080/kiazanmsservice/DepartmentDelete',
                 cache: false,
                 data: data
             }).done(function (result) {
@@ -50,7 +50,7 @@
 
         self.updateDepartment = function (data, callback) {
             return ajaxService.post({
-                url: 'http://localhost:1234/kiazanmsservice/DepartmentUpdate',
+                url: 'http://localhost:8080/kiazanmsservice/DepartmentUpdate',
                 cache: false,
                 data: data
             }).done(function (result) {

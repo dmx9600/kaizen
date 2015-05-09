@@ -5,7 +5,7 @@
         
           self.getAllKiazanCout = function (data, callback) {
             return ajaxService.get({
-                url: 'http://localhost:1234/kiazanmsservice/KiazanCout',
+                url: 'http://localhost:8080/kiazanmsservice/KiazanCout',
                 cache: false,
                 data: data
             }).done(function (result) {
@@ -16,7 +16,7 @@
         
           self.insertKiazanCout = function (data, callback) {
             return ajaxService.post({
-                url: 'http://localhost:1234/kiazanmsservice/KiazanCoutInsert',
+                url: 'http://localhost:8080/kiazanmsservice/KiazanCoutInsert',
                 cache: false,
                 data: data
             }).done(function (result) {
@@ -27,7 +27,7 @@
         
          self.insertSuggestion = function (data, callback) {
             return ajaxService.post({
-                url: 'http://localhost:1234/kiazanmsservice/SuggestionInsert',
+                url: 'http://localhost:8080/kiazanmsservice/SuggestionInsert',
                 cache: false,
                 data: data
             }).done(function (result) {
@@ -38,7 +38,18 @@
         
         self.updateSuggestion = function (data, callback) {
             return ajaxService.post({
-                url: 'http://localhost:1234/kiazanmsservice/SuggestionUpdate',
+                url: 'http://localhost:8080/kiazanmsservice/SuggestionUpdate',
+                cache: false,
+                data: data
+            }).done(function (result) {
+                if (typeof callback === "function")
+                    callback(result);
+            });
+        };
+        
+         self.approvalSuggestion = function (data, callback) {
+            return ajaxService.post({
+                url: 'http://localhost:8080/kiazanmsservice/SuggestionApproval',
                 cache: false,
                 data: data
             }).done(function (result) {
@@ -49,7 +60,7 @@
         
           self.getSuggestion = function (data, callback) {
             return ajaxService.get({
-                url: 'http://localhost:1234/kiazanmsservice/Suggestion?MonthId='+data.MonthId+'&$KaizenStatus='+data.$KaizenStatus,
+                url: 'http://localhost:8080/kiazanmsservice/Suggestion?MonthId='+data.MonthId+'&$KaizenStatus='+data.$KaizenStatus,
                 cache: false,
                 data: data
             }).done(function (result) {
@@ -60,7 +71,7 @@
         
          self.suggestionMaxId = function (data, callback) {
             return ajaxService.get({
-                url: 'http://localhost:1234/kiazanmsservice/SuggestionMaxId',
+                url: 'http://localhost:8080/kiazanmsservice/SuggestionMaxId',
                 cache: false,
                 data: data
             }).done(function (result) {
@@ -71,7 +82,7 @@
         
          self.kaizenMaxId = function (data, callback) {
             return ajaxService.get({
-                url: 'http://localhost:1234/kiazanmsservice/KaizenMaxId',
+                url: 'http://localhost:8080/kiazanmsservice/KaizenMaxId',
                 cache: false,
                 data: data
             }).done(function (result) {
@@ -82,7 +93,7 @@
         
          self.statusbyModule = function (data, callback) {
             return ajaxService.get({
-                 url: 'http://localhost:1234/kiazanmsservice/StatusbyModule?ModuleId='+data.data,
+                 url: 'http://localhost:8080/kiazanmsservice/StatusbyModule?ModuleId='+data.data,
                 cache: false,
                 data: data
             }).done(function (result) {

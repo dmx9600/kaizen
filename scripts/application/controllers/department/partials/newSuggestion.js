@@ -89,7 +89,8 @@
                 }
                 
                 var obj = {
-                    "MonthId":0
+                    "MonthId": 0,
+                    "KaizenStatus": 4
                 };
                 
                 kaizanCountService.getSuggestion(obj).then(function (data) {

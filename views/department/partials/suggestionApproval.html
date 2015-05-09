@@ -4,7 +4,7 @@
             <div class="form-group">
                 <label class="col-sm-4 control-label">Month</label>
                 <div class="col-sm-8">
-                       <input type="text"  class="form-control input-sm"  placeholder="Month"   ui-Autocomplete="monothAutoComplete"  data-ng-model="monthData.Name"/>
+                      <input type="text"  class="form-control input-sm"  data-ng-change="change()" placeholder="Month "   ui-Autocomplete="monthAutoComplete"  data-ng-model="monthData.Name"/>
                 </div>
             </div>
         </div>  
@@ -13,7 +13,7 @@
             <div class="form-group">
                 <label class="col-sm-4 control-label">Status</label>
                 <div class="col-sm-8">
-                    <input type="text" maxlength="50" required class="form-control" data-ng-model="Name">
+                      <input type="text"  class="form-control input-sm"  data-ng-change="" placeholder="Status "   ui-Autocomplete="statusbyModuleAutocomplete"  data-ng-model="statusbyModule.Name"/>
 
                 </div>
             </div>  
@@ -55,9 +55,9 @@
                 <td>{{item.Proposer}}</td>
                 <td>{{item.KaizenStatus}}</td>
                 <td>{{item.Suggestion}}</td>               
-                <td><button class="btn btn-info btn-xs"><span class="glyphicon glyphicon-list-alt"></span></button></td>
-                <td><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></button></td>
-                <td><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button></td>
+              <!--  <td><button class="btn btn-info btn-xs"><span class="glyphicon glyphicon-list-alt"></span></button></td>-->
+              <td><button data-ng-disabled="item.KaizenStatusId == 5" class="btn btn-success btn-xs" data-ng-click="approve(item)" ><span class="glyphicon glyphicon-ok"></span></button></td>
+                <td><button data-ng-disabled="item.KaizenStatusId == 6" class="btn btn-danger btn-xs" data-ng-click="reject(item)"><span class="glyphicon glyphicon-remove"></span></button></td>
             </tr>           
             <!-- <tr>
                  <td>SUG0001</td>

@@ -5,7 +5,7 @@
 
         self.getAllUser = function (data, callback) {
             return ajaxService.get({
-                url: 'http://localhost:1234/kiazanmsservice/User',
+                url: 'http://localhost:8080/kiazanmsservice/User',
                 cache: false,
                 data: data
             }).done(function (result) {
@@ -16,7 +16,7 @@
 
         self.getUserById = function (data, callback) {
             return ajaxService.get({
-                url: 'http://localhost:1234/kiazanmsservice/UserById',
+                url: 'http://localhost:8080/kiazanmsservice/UserById',
                 cache: false,
                 data: data
             }).done(function (result) {
@@ -27,7 +27,7 @@
 
         self.insertUser = function (data, callback) {
             return ajaxService.post({
-                url: 'http://localhost:1234/kiazanmsservice/UserInsert',
+                url: 'http://localhost:8080/kiazanmsservice/UserInsert',
                 cache: false,
                 data: data
             }).done(function (result) {
@@ -38,7 +38,7 @@
         
          self.updateUser = function (data, callback) {
             return ajaxService.post({
-                url: 'http://localhost:1234/kiazanmsservice/UserUpdate',
+                url: 'http://localhost:8080/kiazanmsservice/UserUpdate',
                 cache: false,
                 data: data
             }).done(function (result) {
@@ -51,7 +51,7 @@
         
          self.deleteUser = function (data, callback) {
             return ajaxService.post({
-                url: 'http://localhost:1234/kiazanmsservice/UserDelete',
+                url: 'http://localhost:8080/kiazanmsservice/UserDelete',
                 cache: false,
                 data: data
             }).done(function (result) {
