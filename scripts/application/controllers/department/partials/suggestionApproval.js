@@ -35,7 +35,6 @@
                 approve(data);
                 //initialization();  getSuggestion($scope.monthData.Id, $scope.statusbyModule.Id);
             };
-
             function approve(data) {
 
 
@@ -59,8 +58,6 @@
                 getSuggestion(0, 0);
 
             }
-
-
             function reject(data) {
                 var obj = {
                     "Id": data.Id,

@@ -90,7 +90,7 @@
                                         function (item) {
                                             return {
                                                 label: item.EMPName,
-                                                value1: item.Id
+                                                value1: item.UserId
                                             };
                                         }));
                                 });

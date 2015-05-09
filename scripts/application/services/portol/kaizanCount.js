@@ -25,9 +25,44 @@
             });
         };
         
+        
+        
+            self.insertKiazan = function (data, callback) {
+            return ajaxService.post({
+                url: 'http://localhost:8080/kiazanmsservice/KiazanInsert',
+                cache: false,
+                data: data
+            }).done(function (result) {
+                if (typeof callback === "function")
+                    callback(result);
+            });
+        };
+        
           self.insertKiazanCout = function (data, callback) {
             return ajaxService.post({
                 url: 'http://localhost:8080/kiazanmsservice/KiazanCoutInsert',
+                cache: false,
+                data: data
+            }).done(function (result) {
+                if (typeof callback === "function")
+                    callback(result);
+            });
+        };
+        
+         self.insertBenefits = function (data, callback) {
+            return ajaxService.post({
+                url: 'http://localhost:8080/kiazanmsservice/BenefitsInsert',
+                cache: false,
+                data: data
+            }).done(function (result) {
+                if (typeof callback === "function")
+                    callback(result);
+            });
+        };
+        
+        self.approvalKaizen = function (data, callback) {
+            return ajaxService.post({
+                url: 'http://localhost:8080/kiazanmsservice/KaizenApproval',
                 cache: false,
                 data: data
             }).done(function (result) {
